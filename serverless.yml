@@ -1,0 +1,12 @@
+service: basic-dynamo
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  environment:
+    TableName: Users
+    TopicArn: x
+
+functions:
+  StoreData:
+    handler: handler.useCase
